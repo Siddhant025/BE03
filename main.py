@@ -14,6 +14,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 cache  = Cache(config={"CACHE_TYPE": "RedisCache","CACHE_REDIS_HOST":"0.0.0.0",
 "CACHE_REDIS_PORT":6379})
 
+cache.init_app(app)
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
